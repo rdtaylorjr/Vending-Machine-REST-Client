@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>Vending Machine</title>
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+        <!-- Additional CSS files -->
+    </head>
+    <body>
+        <div class="container my-3 p-3 bg-light">
+            <h1 class="text-center">Vending Machine</h1>
+            <hr>
+            <div class="row">
+                <div id="items" class="col-8 d-flex flex-wrap justify-content-between align-content-start">
+                </div>
+                
+                <div class="col d-flex flex-column align-items-center p-1 mr-3">
+                    <div class="d-flex justify-content-around w-100 pb-1 bg-light border-0">
+                        <h2>Credit</h2>
+                    </div>
+                    <div class="card text-center w-100 mb-2 border-dark border-2 p-2">
+                        <div id="credit">$0.00</div>
+                    </div>
+
+                    <div class="d-flex justify-content-around w-100 mb-2">
+                        <button type="button" class="btn btn-primary w-50 bg-light text-dark border-dark border-2 mr-1" onclick="addCash(100)">Add Dollar</button>
+                        <button type="button" class="btn btn-primary w-50 bg-light text-dark border-dark border-2 ml-1" onclick="addCash(25)">Add Quarter</button>
+                    </div>
+
+                    <div class="d-flex justify-content-around w-100 mb-4">
+                        <button type="button" class="btn btn-primary w-50 bg-light text-dark border-dark border-2 mr-1" onclick="addCash(10)">Add Dime</button>
+                        <button type="button" class="btn btn-primary w-50 bg-light text-dark border-dark border-2 ml-1" onclick="addCash(5)">Add Nickel</button>
+                    </div>
+
+                    <div class="d-flex justify-content-around w-100 pb-1 bg-light border-0">
+                        <h2>Messages</h2>
+                    </div>
+
+                    <div class="card text-center w-100 mb-3 border-dark border-2 p-2">
+                        <div id="messages">Please enter an item number</div>
+                    </div>
+
+                    <div class="d-flex w-100 justify-content-between mb-3">
+                        <h3 class="pt-1">Item:</h3>
+                        <input id="itemId" type="number" min="0" class="w-75 text-center rounded border">
+                    </div>
+
+                    <button type="button" class="btn btn-primary w-100 bg-light text-dark border-dark border-2 mb-4" onclick="makePurchase()">Make Purchase</button>
+
+                    <div class="d-flex justify-content-around w-100 pb-1 bg-light border-0">
+                        <h2>Change</h2>
+                    </div>
+
+                    <div class="card text-center w-100 mb-2 border-dark border-2 p-2">
+                        <div id="change" style="text-transform: capitalize">&nbsp;</div>
+                    </div>
+
+                    <button type="button" class="btn btn-primary w-100 bg-light text-dark border-dark border-2 mb-3" onclick="returnChange()">Return Change</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+        <!-- custom js files -->
+        <script src="js/home.js"></script>
+    </body>
+</html>
